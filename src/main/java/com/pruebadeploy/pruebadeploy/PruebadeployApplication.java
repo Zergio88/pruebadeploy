@@ -12,7 +12,7 @@ public class PruebadeployApplication {
 
 	@GetMapping("/")
 	public String mensaje() {
-		return "*** Welcome to MorfandoInc-API ***";
+		return "{ Welcome to MorfandoInc-API }";
 	}
 	
 	public static void main(String[] args) {
