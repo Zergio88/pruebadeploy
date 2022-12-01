@@ -19,7 +19,8 @@ public class Direccion {
 	private String localidad;
 	private String provincia;
 	private String pais;
-	private String geolocalizacion;
+	private String latitud;
+	private String longitud;
 
 
 	public int getId_direccion() {
@@ -71,11 +72,18 @@ public class Direccion {
 		this.pais = pais;
 	}
 
-	public String getGeolocalizacion() {
-		return geolocalizacion;
+	public String getLatitud() {
+		return this.latitud;
 	}
-	public void setGeolocalizacion(String geolocalizacion) {
-		this.geolocalizacion = geolocalizacion;
+	public void setLatitud(String latitud) {
+		this.latitud = latitud;
+	}
+	
+	public String getLongitud() {
+		return this.longitud;
+	}
+	public void setLongitud(String longitud) {
+		this.longitud = longitud;
 	}
 		
 }

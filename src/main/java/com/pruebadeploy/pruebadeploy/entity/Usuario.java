@@ -2,9 +2,12 @@ package com.pruebadeploy.pruebadeploy.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,8 +20,10 @@ public class Usuario {
 		private String mail;
 		private String password;
 		private String nombre;
-		@Column(name = "id_rol")
-		private Integer id_rol;
+		@OneToOne(fetch = FetchType.EAGER)
+		@JoinColumn(name="id_rol")
+		//@Column(name = "id_rol")
+		private Rol rol;
 		private String foto;
 		
 		public Integer getId_usuario() {
@@ -28,10 +33,10 @@ public class Usuario {
 			this.id_usuario = id_usuario;
 		}
 		
-		public void setEmail(String mail) {
+		public void setMail(String mail) {
 			this.mail = mail;
 		}
-		public String getEmail() {
+		public String getMail() {
 			return mail;
 		}
 		
@@ -49,11 +54,12 @@ public class Usuario {
 			this.nombre = nombre;
 		}
 
-		public Integer getId_rol() {
-			return id_rol;
+		public Rol getRol() {
+			return this.rol;
 		}
-		public void setId_rol(Integer id_rol) {
-			this.id_rol = id_rol;
+		
+		public void rol(Rol rol) {
+			this.rol = rol;
 		}
 		
 		public String getFoto() {
