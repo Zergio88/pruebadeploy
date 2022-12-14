@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'morfandotestdeploy'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A9C5EB3CDA4A42A6983E3BD8E96C34B2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2B500786330F4882A06BDDF12BC9E26B }}
           package: '*.jar'
